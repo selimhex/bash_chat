@@ -15,8 +15,8 @@ function parser {
     exit) exit 0;;
     echo*) shift; echo $*;;
 #    *) figlet $*;;
-    *) curl -d user=${user} --data-urlencode chat="""$*""" -G $FORM;
-    wget -c -o /dev/null $URL -O $FILE;;
+    *) curl -d user=${user} --data-urlencode chat="""$*""" -G $FORM;;
+    #wget -c -o /dev/null $URL -O $FILE;;
     #wget -ca -o /dev/null -O $FILE $URL;;
 
     #curl -d user=a -d chat=jgjg -G http://localhost/chat.php

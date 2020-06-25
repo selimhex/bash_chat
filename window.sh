@@ -4,4 +4,4 @@ then
   ${resize} -s 20 60
   clear
 fi
-tail -f locallog.txt
+tail -f "$FILE"

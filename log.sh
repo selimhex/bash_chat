@@ -8,12 +8,13 @@ fi
 function logg() {
 #echo "tick"
 #wget -ca -o /dev/null -O $FILE $URL ################ < this was it before that >>>
-wget -c -o /dev/null $URL -O $FILE
+wget -c -o /dev/null $URL -O $FILE ####### fav
+#wget -ca -o /dev/null -O $FILE $URL
 #wget -Nca -o - -O $FILE $URL
 #echo "tock"
 }
 function logger() {
-while true; do logg & sleep 2; done
+while true; do logg; sleep 2; done
 }
 logger &
 
