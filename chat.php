@@ -12,6 +12,10 @@ if (!empty($_GET))
 $linetoadd = strval($_GET["user"]) . ": " . strval($_GET["chat"]);
 system("if ! test -f \"".$chatlog."\"; then touch ".$chatlog."; fi");
 system ("echo ". escapeshellarg(escapeshellcmd($linetoadd)) . " >> ".$chatlog."");
+
+if($_GET["chat"] == "super_secret_code_to_delete_chat_log") {
+  system("rm ".$chatlog.";date >> last_completed;echo \"\" > ".$chatlog."");
+}
 #system ("tail -n 11 txt.txt.temp > txt.txt");
 
 #system ("cat txt.txt.temp > txt.txt");
